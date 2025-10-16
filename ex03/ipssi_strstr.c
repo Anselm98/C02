@@ -12,12 +12,12 @@ char	*ipssi_strstr(char *str, char *to_find)
 		while (str[i + j] == to_find[j])
 		{
 			if (str[i + j] == '\0')
-				break ;
+				return (&str[i]);
 			j++;
 		}
 		if (to_find[j] == '\0')
 			return (&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
